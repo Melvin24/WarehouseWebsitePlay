@@ -1,0 +1,44 @@
+@(orderList: List[Order], itemList: List[Item])
+<DOCTYPE html>
+
+<html lang = "en">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+    <!--$.ajax({-->
+        <!--url: '@routes.Assets.versioned("javascripts/test.json")',-->
+        <!--dataType: 'json',-->
+        <!--type: 'get',-->
+        <!--cache: false,-->
+        <!--success: function(data){-->
+        <!--console.log(data.Job0);-->
+  }
+})
+</script>
+
+
+</head>
+
+<body>
+
+@for(i <- 0 until orderList.length){
+
+    @orderList(i).getOrderID()
+}
+<div id="uncollectedOrders" onclick="orderCollected()">@orderList</div>
+<div id="collectedOrderes">@itemList</div>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
